@@ -1,0 +1,28 @@
+package practice1;
+
+public class Main05 {
+	public static void main(String[] args) {
+		int n=12;
+		int m=15;
+		int[] answer=new int[2];
+		int max=n<m?m:n;
+		int min=n>m?m:n;
+		for(int i=1;i<=min;i++) {
+			if(min%i==0&&max%i==0) {
+				answer[0]=i;
+			}
+		}
+		
+		for(int i=(n*m);i>=max;i--) {
+			if(i%min==0&&i%max==0) {
+				answer[1]=i;
+			}
+		}
+		
+	
+		
+		
+		System.out.print(answer[0]+",");
+		System.out.print(answer[1]);
+	}
+}
