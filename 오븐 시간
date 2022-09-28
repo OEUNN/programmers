@@ -1,0 +1,29 @@
+package practice.Test0927;
+
+import java.util.Scanner;
+//백준2525
+public class Test01 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		int hour=sc.nextInt();
+		int minute =sc.nextInt();
+		int need=sc.nextInt();
+		
+		int sum=minute+need;
+		
+		if(sum>=60) {
+			minute=sum/60;
+			hour+=minute;
+			sum=sum%60;
+			if(hour>=24) {
+				hour-=24;
+			}	
+		}
+		System.out.println(hour+" "+sum);
+		
+		sc.close();
+	}
+
+}
