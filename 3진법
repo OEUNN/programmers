@@ -1,0 +1,37 @@
+package practice.Test0927;
+
+public class Test03 {
+
+	public static void main(String[] args) {
+		int n=45;
+		int answer=n;
+		int cnt=0;
+		
+		
+		while(answer>0) {
+			answer=answer/3;
+			cnt++;
+		}
+		answer=0;
+		int[] arr=new int[cnt];
+		for(int i=arr.length-1;i>=0;i--) {
+			int a=3;
+			arr[i]=n%3;
+			n=n/3;
+			System.out.println(i+" "+arr[i]);
+			if(i!=0) {
+				for(int j=0;j<i-1;j++) {
+					a=3*a;	
+				}
+			}else {
+				a=1;
+			}
+			arr[i]=arr[i]*a;
+			
+			System.out.println(a);
+			System.out.println(arr[i]+"\n");
+			answer+=arr[i];
+		}
+	}
+
+}
